@@ -1,8 +1,10 @@
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
+FROM lsiobase/xenial
+
 
 COPY /build/* /
 
-RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial main ">/etc/apt/sources.list.d/handbreak.list && apt-get update && apt-get install --allow-unauthenticated -y python-pip handbrake-cli libssl1.0.0 libexpat1 libavcodec-ffmpeg56 libgl1-mesa-glx unzip 
+RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial main ">/etc/apt/sources.list.d/handbreak.list && apt-get update && apt-get install --allow-unauthenticated -y python-pip handbrake-cli libssl1.0.0 libexpat1 libavcodec-ffmpeg56 libgl1-mesa-glx unzip
 #libavcodec-ffmpeg-extra56
 
 
@@ -15,4 +17,3 @@ RUN dpkg -i filebot_4.7.2_amd64.deb
 ADD settings.example.cfg /Autorippr-1.7.0/settings.cfg
 
 ENTRYPOINT ["python", "/Autorippr-1.7.0/autorippr.py"]
-
