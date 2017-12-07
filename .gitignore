@@ -28,7 +28,7 @@ pip-log.txt
 .mr.developer.cfg
 
 # Settings
-settings.cfg
+#settings.cfg
 
 # SQLite database
 *.sqlite
