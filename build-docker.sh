@@ -9,5 +9,5 @@
 
 
 docker build -t buildmakemkv ./build_makemkv
-docker run --rm buildmakemkv | tar -xvz
+#docker run --rm buildmakemkv | tar -xvz
 docker build -t autorippr .
