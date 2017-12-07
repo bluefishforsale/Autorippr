@@ -5,8 +5,8 @@ IMAGE="autorippr"
 VERSION="latest"
 LOCALDIR="/data01/services/${SERVICE}"
 RIP="/data01/incoming/discs"
-TV="/data01/incoming/complete/tv"
-MOVIES="/data01/incoming/complete/movies"
+TV="/data01/complete/tv"
+MOVIES="/data01/complete/movies"
 
 docker stop ${SERVICE}
 docker rm ${SERVICE}
