@@ -1,7 +1,8 @@
 #FROM ubuntu:16.04
-FROM lsiobase/xenial
+FROM buildmakemkv:latest
 
-COPY /build/* /
+# take makemkv build and put it where the rest of the stuff thinks it should be
+RUN mv /build/* /
 
 RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial main " > /etc/apt/sources.list.d/handbreak.list && \
     apt-get update && \
