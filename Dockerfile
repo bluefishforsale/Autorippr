@@ -26,3 +26,4 @@ RUN dpkg -i filebot_4.7.2_amd64.deb
 ADD settings.example.cfg /Autorippr-1.7.0/settings.cfg
 
 ENTRYPOINT ["python", "/Autorippr-1.7.0/autorippr.py"]
+CMD ["python", "/Autorippr-1.7.0/autorippr.py", "--all"]
