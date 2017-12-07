@@ -16,6 +16,7 @@ sudo docker run -d \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
+    --device /dev/sr0 \
     -e PUID=1001 -e PGID=100 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp \
