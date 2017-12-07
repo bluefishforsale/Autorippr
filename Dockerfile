@@ -1,5 +1,6 @@
 #FROM ubuntu:16.04
 FROM lsiobase/xenial
+
 COPY /build/* /
 
 RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial main " > /etc/apt/sources.list.d/handbreak.list && \
