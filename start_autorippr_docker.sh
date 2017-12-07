@@ -4,7 +4,7 @@ SERVICE="autorippr"
 IMAGE="autorippr"
 VERSION="latest"
 LOCALDIR="/data01/services/${SERVICE}"
-RIP="/data01/incoming/discs"
+RIP="/M2scratch/autorippr"
 TV="/data01/complete/tv"
 MOVIES="/data01/complete/movies"
 
@@ -19,9 +19,9 @@ sudo docker run -d \
     --device /dev/sr0 \
     -e PUID=1001 -e PGID=100 \
     -v ${LOCALDIR}:/config \
-    -v ${RIP}:/tmp \
-    -v ${TV}:/tmp/tvshows \
-    -v ${MOVIES}:/tmp/movies \
+    -v ${RIP}:/rip \
+    -v ${TV}:/tv \
+    -v ${MOVIES}:/movies \
   ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
