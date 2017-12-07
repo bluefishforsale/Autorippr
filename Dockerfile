@@ -2,7 +2,7 @@
 FROM buildmakemkv:latest
 
 # take makemkv build and put it where the rest of the stuff thinks it should be
-RUN mv /build/* /
+RUN cp -rp /build/* /
 
 RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial main " > /etc/apt/sources.list.d/handbreak.list && \
     apt-get update && \
