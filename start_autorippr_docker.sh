@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SERVICE="autorippr"
-IMAGE="bluefishforsale/autorippr"
+IMAGE="autorippr"
 VERSION="latest"
 LOCALDIR="/data01/services/${SERVICE}"
 RIP="/data01/incoming/discs"
