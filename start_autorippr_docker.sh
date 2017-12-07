@@ -21,6 +21,7 @@ sudo docker run -d \
     -v ${RIP}:/tmp \
     -v ${TV}:/tmp/tvshows \
     -v ${MOVIES}:/tmp/movies \
-  ${IMAGE}:${VERSION}
+  ${IMAGE}:${VERSION} \
+    autorippr.py  --all
 
 docker logs ${SERVICE}
