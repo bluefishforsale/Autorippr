@@ -20,8 +20,8 @@ sudo docker run -d \
     -e PUID=1001 -e PGID=100 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
-    -v ${TV}:/tmp/tv \
-    -v ${MOVIES}:/tmp/movies \
+    -v ${TV}:/tv \
+    -v ${MOVIES}:/movies \
   ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
