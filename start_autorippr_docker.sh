@@ -1,4 +1,4 @@
-1lyW04dn!/usr/bin/env bash
+#!/usr/bin/env bash
 
 SERVICE="autorippr"
 IMAGE="autorippr"
