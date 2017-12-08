@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+1lyW04dn!/usr/bin/env bash
 
 SERVICE="autorippr"
 IMAGE="autorippr"
@@ -19,9 +19,9 @@ sudo docker run -d \
     --device /dev/sr0 \
     -e PUID=1001 -e PGID=100 \
     -v ${LOCALDIR}:/config \
-    -v ${RIP}:/rip \
-    -v ${TV}:/tv \
-    -v ${MOVIES}:/movies \
+    -v ${RIP}:/tmp/rip \
+    -v ${TV}:/tmp/tv \
+    -v ${MOVIES}:/tmp/movies \
   ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
