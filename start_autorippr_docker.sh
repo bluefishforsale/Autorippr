@@ -11,17 +11,16 @@ MOVIES="/data01/complete/movies"
 docker stop ${SERVICE}
 docker rm ${SERVICE}
 
-
 sudo docker run -d \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
     --device /dev/sr0 \
-    -e PUID=1001 -e PGID=100 \
+    -e PUID=1001 -e PGID=1001 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
-    -v ${MOVIES}:/movies \
+    -v ${MOVIES}:/mo8vies \
   ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
