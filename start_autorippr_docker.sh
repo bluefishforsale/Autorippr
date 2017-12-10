@@ -15,12 +15,13 @@ sudo docker run -d \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
-    --device /dev/sr0 \
+    --device=/dev/sr0:/dev/sr0:r \
     -e PUID=1001 -e PGID=1001 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
     -v ${MOVIES}:/mo8vies \
-  ${IMAGE}:${VERSION}
+  ${IMAGE}:${VERSION} \
+    --rip --compress --extra
 
 docker logs ${SERVICE}
