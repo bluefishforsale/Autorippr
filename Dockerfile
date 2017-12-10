@@ -8,6 +8,7 @@ RUN echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenial
     apt-get update && \
     apt-get install --allow-unauthenticated -y \
     python-pip \
+    eject \
     handbrake-cli \
     libssl1.0.0 \
     libexpat1 \
