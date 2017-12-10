@@ -21,7 +21,6 @@ sudo docker run -d \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
     -v ${MOVIES}:/mo8vies \
-  ${IMAGE}:${VERSION} \
-    --rip --compress --extra
+  ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
