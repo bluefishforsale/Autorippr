@@ -142,7 +142,7 @@ def rip(config):
             mkv_api.set_index(dvd["discIndex"])
 
             disc_title = mkv_api.get_title()
-            
+
             if not config['force_db']:
                 disc_type = mkv_api.get_type()
             else:
@@ -364,7 +364,7 @@ def extras(config):
                     log.debug("Flag failed")
             else:
                 log.debug("Did not find foreign subtitle for {}.".format(dbvideo.vidname))
-                
+
         log.info("Attempting video rename")
 
         database.update_video(dbvideo, 7)
@@ -439,12 +439,12 @@ if __name__ == '__main__':
     config['debug'] = arguments['--debug']
 
     config['silent'] = arguments['--silent']
-    
+
     if arguments['--force_db'] not in ['tv','movie', None]:
         raise ValueError('{} is not a valid DB.'.format(arguments['--force_db']))
     else:
         config['force_db'] = arguments['--force_db']
-        
+
     notify = notification.Notification(
         config, config['debug'], config['silent'])
 
