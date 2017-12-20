@@ -241,7 +241,8 @@ def rip(config):
                 log.info("Video folder {} already exists".format(disc_title))
 
     else:
-        log.info("Could not find any DVDs in drive list")
+        pass
+        #log.info("Could not find any DVDs in drive list")
 
 
 def skip_compress(config):
@@ -333,7 +334,8 @@ def compress(config):
             )
 
     else:
-        log.info("Queue does not exist or is empty")
+        pass
+        #log.info("Queue does not exist or is empty")
 
 
 def extras(config):
@@ -429,7 +431,8 @@ def extras(config):
             log.info("Rename failed")
 
     else:
-        log.info("No videos ready for filebot")
+        pass
+        #log.info("No videos ready for filebot")
 
 
 if __name__ == '__main__':
