@@ -20,7 +20,7 @@ sudo docker run -d \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
-    -v ${MOVIES}:/mo8vies \
+    -v ${MOVIES}:/movies \
   ${IMAGE}:${VERSION}
 
 docker logs ${SERVICE}
