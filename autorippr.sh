@@ -12,7 +12,7 @@ docker stop ${SERVICE}
 docker rm ${SERVICE}
 
 sudo docker run -d \
-    --cpus=2 \
+    --cpus=4 \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
