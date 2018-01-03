@@ -1,9 +1,8 @@
 #!/usr/bin/with-contenv bash
 
-
 # permissions (recursive) on Autorippr
 chown -R abc:abc \
-  /Autorippr-*
+	/Autorippr-* 
 
 # permissions (non-recursive) on config root and folders
 chown abc:abc \
