@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bash
 
 echo "Starting Autorippr Disc Ripper."
-exec s6-setuidgid root /bin/bash -c \
+exec s6-setuidgid abc /bin/bash -c \
  'python /Autorippr-1.7.0/autorippr.py --all'
