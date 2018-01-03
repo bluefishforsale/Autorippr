@@ -24,8 +24,8 @@ RUN pip install tendo pyyaml peewee
 RUN unzip /autorippr-1.7.0.zip
 RUN dpkg -i filebot_4.7.2_amd64.deb
 
+COPY root/ /
 ADD settings.cfg /Autorippr-1.7.0/
-ADD services.d /etc/services.d
 
 # ENTRYPOINT ["python", "/Autorippr-1.7.0/autorippr.py"]
 # CMD ["--all"]
