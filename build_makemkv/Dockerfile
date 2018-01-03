@@ -20,4 +20,5 @@ RUN tar xf /src/makemkv-oss-1.10.8.tar.gz -C /src
 
 RUN cd /src/makemkv-oss-1.10.8 && ./configure --prefix /build/usr --disable-gui && make install
 
-CMD ["bash"]
+# add local files
+COPY root/ /
