@@ -18,7 +18,7 @@ sudo docker run -d \
     --hostname=${HOSTNAME} \
     --device=/dev/sr0:/dev/sr0:rw \
     --cap-add=SYS_RAWIO \
-    -e PUID=1001 -e PGID=1001 \
+    -e PUID=0 -e PGID=0 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
