@@ -1,11 +1,9 @@
 #!/usr/bin/with-contenv bash
 
-# create folders
-if [ ! -d "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}" ]; then \
-mkdir -p "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}"
-chown -R abc:abc /config
-chown -R abc:abc /Autorippr-*/
-fi
+
+# permissions (recursive) on Autorippr
+chown -R abc:abc \
+  /Autorippr-*
 
 # permissions (non-recursive) on config root and folders
 chown abc:abc \
