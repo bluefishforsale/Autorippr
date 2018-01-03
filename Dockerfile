@@ -26,7 +26,7 @@ RUN dpkg -i filebot_4.7.2_amd64.deb
 
 ADD settings.cfg /Autorippr-1.7.0/
 
-RUN useradd -D -u 1001 -U -M -m / media
+RUN useradd -u 1001 media
 
 ENTRYPOINT [ "/init" ]
 CMD python /Autorippr-1.7.0/autorippr.py --all
