@@ -1,0 +1,2 @@
+#!/usr/bin/env
+exec s6-setuidgid media python /Autorippr-1.7.0/autorippr.py --all
