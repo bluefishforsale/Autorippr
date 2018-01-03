@@ -29,3 +29,6 @@ RUN dpkg -i filebot_4.7.2_amd64.deb \
 RUN pip install tendo pyyaml peewee
 
 COPY settings.cfg /Autorippr-1.7.0/
+
+# add local files
+COPY root/ /
