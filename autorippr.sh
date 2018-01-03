@@ -12,11 +12,12 @@ docker stop ${SERVICE}
 docker rm ${SERVICE}
 
 sudo docker run -d \
-    --cpus=2 \
+    --cpus=4 \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
-    --device=/dev/sr0:/dev/sr0:r \
+    --device=/dev/sr0:/dev/sr0:rw \
+    --cap-add=SYS_RAWIO \
     -e PUID=1001 -e PGID=1001 \
     -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
