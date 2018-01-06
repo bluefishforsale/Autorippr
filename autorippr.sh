@@ -8,6 +8,8 @@ RIP="/M2scratch/autorippr"
 TV="/data01/complete/tv"
 MOVIES="/data01/complete/movies"
 
+DRIVE=$(ls /dev/sr?)
+
 docker stop ${SERVICE}
 docker rm ${SERVICE}
 
@@ -16,7 +18,7 @@ sudo docker run -d \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
-    --device=/dev/sr?:/dev/sr0:rw \
+    --device=${DRIVE}:/dev/sr0:rw \
     --cap-add=SYS_RAWIO \
     -e PUID=1001 -e PGID=1001 \
     -v ${LOCALDIR}:/config \
