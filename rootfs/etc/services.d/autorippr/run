@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+echo "Starting Autorippr Disc Ripper."
+exec python /Autorippr-1.7.0/autorippr.py --all

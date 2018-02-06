@@ -18,7 +18,7 @@ sudo docker run -d \
     --restart=always \
     --name=${SERVICE} \
     --hostname=${HOSTNAME} \
-    --device=${DRIVE:-/dev/sr0}:/dev/sr0:rw \
+    --device=/dev/sr0:/dev/sr0:r \
     --cap-add=SYS_RAWIO \
     -e PUID=1001 -e PGID=1001 \
     -v ${LOCALDIR}:/config \
