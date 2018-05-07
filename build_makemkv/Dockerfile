@@ -15,7 +15,7 @@ RUN mkdir /src/makemkv-bin-${VERS}/tmp/
 
 RUN echo 'accepted' > /src/makemkv-bin-${VERS}/tmp/eula_accepted
 
-RUN sed -ie 's#DESTDIR=#DESTDIR=/build#g' /src/makemkv-bin-1.10.8/Makefile
+RUN sed -ie 's#DESTDIR=#DESTDIR=/build#g' /src/makemkv-bin-${VERS}/Makefile
 
 RUN cd /src/makemkv-bin-${VERS} && make install
 
