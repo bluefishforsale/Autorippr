@@ -22,7 +22,6 @@ sudo docker run -d \
     --device=/dev/sg0:/dev/sg0:r \
     --cap-add=SYS_RAWIO \
     -e PUID=1001 -e PGID=1001 \
-    -v ${LOCALDIR}:/config \
     -v ${RIP}:/tmp/rip \
     -v ${TV}:/tv \
     -v ${MOVIES}:/movies \
